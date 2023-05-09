@@ -24,7 +24,7 @@ public class UIReturnToMainMenu : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Mouse0)))
+        if ((Input.GetKeyDown(KeyCode.Space))) //Mouse0
         {
             returnMenu.SetActive(false);
             //fpsController.SetActive(!fpsController.activeSelf);
