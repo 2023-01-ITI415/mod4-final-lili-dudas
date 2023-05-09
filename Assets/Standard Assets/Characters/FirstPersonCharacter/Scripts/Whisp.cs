@@ -10,6 +10,9 @@ public class Whisp : MonoBehaviour
 
     private void Start()
     {
+        var plane = GameObject.Find("Plane-preview");
+        Destroy(plane);
+
         audioSource = GetComponent<AudioSource>();
         
     }
