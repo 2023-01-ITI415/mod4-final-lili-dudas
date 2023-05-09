@@ -11,14 +11,16 @@ public class Whisp : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (audio == null) audio = gameObject.AddComponent<AudioSource>();
+        
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player"))
         {
             audioSource.PlayOneShot(soundClip);
-            Destroy(gameObject);
+            if(!audioSource.isPlaying){
+                Destroy(gameObject);
+            }
         }
     }
 }
